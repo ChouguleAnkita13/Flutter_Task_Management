@@ -3,13 +3,21 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:task_management/model/todo_model.dart';
 import 'package:task_management/view/Widgets/theam_manager.dart';
 
-/// WIDGET FOR EACH TASK TILE
+/// WIDGET FOR DISPLAYING EACH TASK AS A TILE
 class TaskTile extends StatelessWidget {
+  /// TASK DATA MODEL TO DISPLAY INFORMATION ABOUT THE TASK
   final TodoModel task;
+
+  /// CALLBACK FUNCTION TO HANDLE TASK EDIT
   final VoidCallback onEdit;
+
+  /// CALLBACK FUNCTION TO HANDLE TASK DELETION
   final VoidCallback onDelete;
+
+  /// CALLBACK FUNCTION TO TOGGLE TASK COMPLETION STATUS
   final VoidCallback onToggle;
 
+  /// CONSTRUCTOR TO INITIALIZE THE TASK TILE
   const TaskTile({
     required this.task,
     required this.onEdit,
@@ -21,13 +29,16 @@ class TaskTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Slidable(
+      /// SLIDABLE ACTION PANE FOR EDITING AND DELETING TASKS
       endActionPane: ActionPane(
         extentRatio: 0.2,
         motion: const ScrollMotion(),
         children: [
+          /// COLUMN CONTAINING EDIT AND DELETE ACTIONS
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              /// EDIT BUTTON
               GestureDetector(
                 onTap: onEdit,
                 child: CircleAvatar(
@@ -35,6 +46,8 @@ class TaskTile extends StatelessWidget {
                   child: const Icon(Icons.edit, color: Colors.white),
                 ),
               ),
+
+              /// DELETE BUTTON
               GestureDetector(
                 onTap: onDelete,
                 child: CircleAvatar(
@@ -46,34 +59,47 @@ class TaskTile extends StatelessWidget {
           ),
         ],
       ),
+
+      /// MAIN CONTENT OF THE TASK TILE
       child: Container(
         padding: const EdgeInsets.all(15),
         margin: const EdgeInsets.only(top: 10),
         decoration: ThemeManager.cardDecoration(task.isDone == 1),
         child: Row(
           children: [
+            /// ICON OR IMAGE FOR THE TASK
             Container(
-                height: 50,
-                width: 50,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: ThemeManager.cardColor,
-                ),
-                child: Image.asset("assets/todo.png")),
+              height: 50,
+              width: 50,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: ThemeManager.cardColor,
+              ),
+              child: Image.asset("assets/todo.png"),
+            ),
             const SizedBox(width: 12),
+
+            /// TASK DETAILS
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  /// TASK TITLE
                   Text(task.title, style: ThemeManager.listItemTitle),
                   const SizedBox(height: 8),
+
+                  /// TASK PRIORITY
                   Text(task.priority, style: ThemeManager.listItemSubtitle),
                   const SizedBox(height: 8),
+
+                  /// TASK DATE
                   Text(task.date, style: ThemeManager.listItemDate),
                 ],
               ),
             ),
+
+            /// CHECKBOX TO TOGGLE TASK COMPLETION
             Checkbox(
               value: task.isDone == 1,
               activeColor: ThemeManager.checkboxActiveColor,
