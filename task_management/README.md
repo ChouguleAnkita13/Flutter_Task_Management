@@ -1,15 +1,20 @@
+
+
+
 # Task_management
 ## Overview
 The Advanced To-Do App is a responsive and feature-rich task management application built using Flutter. Designed with a clean UI and intuitive navigation, it helps users organize their tasks efficiently. The app leverages the GetX state management library for reactive programming and follows the MVC (Model-View-Controller) pattern for maintainability and scalability.
 ## Screenshots
 <div style="display: flex;;">
-    <img src="https://github.com/user-attachments/assets/dde51082-4eaa-47c1-b68a-349f2bbc9e9d" alt="splash" style="margin-right: 10px;" width="300" height="600">
-    <img src="https://github.com/user-attachments/assets/41188b05-9716-47d3-b862-7d622d3ff8e3" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
- <img src="https://github.com/user-attachments/assets/52651a7e-c5e7-44f4-89c8-404ac395ffed" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
+    <img src="https://github.com/user-attachments/assets/cb54bf90-c99d-4a30-b727-f88cc3d448ed" alt="splash" style="margin-right: 10px;" width="300" height="600">
+    <img src="https://github.com/user-attachments/assets/96fbb66c-89c3-4941-8886-315c20614060" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
+ <img src="https://github.com/user-attachments/assets/3052f336-0f9a-4ecc-aeb9-7ce8a0590570" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
  <br> <br><br><br>
- <img src="https://github.com/user-attachments/assets/4b718ce5-ed82-4b37-b7fb-8a0113582bae" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
- <img src="https://github.com/user-attachments/assets/5a79a5de-2959-4c61-9bd4-1e303fee7817" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
- <img src="https://github.com/user-attachments/assets/aefe3210-d2c5-4f09-bfdb-e58137d725e8" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
+ <img src="https://github.com/user-attachments/assets/cab3bf2c-6d67-478e-8a07-49aae914463d" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
+ <img src="https://github.com/user-attachments/assets/697d15f9-523d-4a33-b49f-881470abf09b" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
+ <img src="https://github.com/user-attachments/assets/c731fa92-7246-412d-a90c-95ed28f297fb" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
+ <br> <br><br><br>
+ <img src="https://github.com/user-attachments/assets/b41ce435-81f6-4d57-a268-6fdf13278a8b" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
 </div>
 
 ## Key Features
