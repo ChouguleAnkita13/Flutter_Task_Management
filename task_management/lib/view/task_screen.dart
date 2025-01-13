@@ -42,7 +42,9 @@ class _TaskScreenState extends State<TaskScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           /// DISPLAYS GREETING HEADER WITH NAME AND MESSAGE
-          const GreetingHeader(),
+          GreetingHeader(
+            todoController: todoController,
+          ),
           Expanded(
             child: Container(
               /// BACKGROUND DECORATION FOR THE MAIN CONTAINER

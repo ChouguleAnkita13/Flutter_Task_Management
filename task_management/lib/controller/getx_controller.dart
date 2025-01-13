@@ -17,6 +17,9 @@ class TodoController extends GetxController {
   var titleController = TextEditingController().obs;
   var dateController = TextEditingController().obs;
 
+  /// OBSERVABLE GREETING MESSAGE
+  var greeting = "Good Morning".obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -26,6 +29,19 @@ class TodoController extends GetxController {
       await openDb();
       await getAllTaskList();
     });
+    updateGreeting();
+  }
+
+  /// UPDATES THE GREETING BASED ON THE CURRENT TIME
+  void updateGreeting() {
+    final hour = DateTime.now().hour;
+    if (hour < 12) {
+      greeting.value = "Good Morning";
+    } else if (hour < 17) {
+      greeting.value = "Good Afternoon";
+    } else {
+      greeting.value = "Good Evening";
+    }
   }
 
   /// FETCH ALL TASKS FROM THE DATABASE AND UPDATE THE TASK LIST

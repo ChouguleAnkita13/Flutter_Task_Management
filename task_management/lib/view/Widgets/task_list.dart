@@ -6,7 +6,7 @@ import 'package:task_management/view/Widgets/task_tile.dart';
 
 /// WIDGET FOR DISPLAYING THE TASK LIST
 class TaskList extends StatelessWidget {
-  /// INSTANCE OF THE TODO CONTROLLER TO MANAGE STATE
+  /// INSTANCE OF THE TO DO CONTROLLER TO MANAGE STATE
   final TodoController todoController;
 
   /// CALLBACK FUNCTION TO HANDLE EDITING OF A TASK
