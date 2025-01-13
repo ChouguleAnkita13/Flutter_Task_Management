@@ -72,9 +72,16 @@ class _TaskScreenState extends State<TaskScreen> {
 
                       /// DISPLAYS THE LIST OF TASKS
                       child: TaskList(
-                        todoController: todoController,
-                        onEdit: (todo) => bottomSheet(true, todo),
-                      ),
+                          todoController: todoController,
+                          onEdit: (todo) {
+                            todoController.titleController.value.text =
+                                todo.title;
+                            todoController.selectedPriority.value =
+                                todo.priority;
+                            todoController.dateController.value.text =
+                                todo.date;
+                            bottomSheet(true, todo);
+                          }),
                     ),
                   ),
                 ],

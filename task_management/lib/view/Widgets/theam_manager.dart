@@ -48,7 +48,7 @@ class ThemeManager {
   static Color secondaryColor = Colors.grey[200]!;
   static Color backgroundColor = Colors.purple[400]!;
   static Color cardColor = Colors.white;
-  static Color completedTaskColor = Colors.grey[100]!;
+  static Color completedTaskColor = Colors.purple[50]!;
   static Color checkboxActiveColor = Colors.green[500]!;
   static Color borderColor = Colors.grey[200]!;
 

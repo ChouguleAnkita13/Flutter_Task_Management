@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:task_management/controller/getx_controller.dart';
 import 'package:task_management/model/todo_model.dart';
@@ -18,7 +19,7 @@ class BottomSheetContent extends StatelessWidget {
   /// CONSTRUCTOR TO INITIALIZE BOTTOM SHEET CONTENT
   const BottomSheetContent({
     required this.isEdit,
-    this.todoObj,
+    required this.todoObj,
     required this.todoController,
     super.key,
   });
@@ -61,18 +62,20 @@ class BottomSheetContent extends StatelessWidget {
             Text("Priority", style: ThemeManager.subHeadline),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              child: DropdownButton<String>(
-                value: todoController.selectedPriority.value,
-                onChanged: (String? newValue) {
-                  todoController.selectedPriority.value = newValue!;
-                },
-                items: todoController.priorityList
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+              child: Obx(
+                () => DropdownButton<String>(
+                  value: todoController.selectedPriority.value,
+                  onChanged: (String? newValue) {
+                    todoController.selectedPriority.value = newValue!;
+                  },
+                  items: ["High", "Low", "Medium"]
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
               ),
             ),
             const SizedBox(height: 15),
@@ -99,7 +102,7 @@ class BottomSheetContent extends StatelessWidget {
               decoration: InputDecoration(
                 suffixIcon: Icon(
                   Icons.calendar_month,
-                  color: ThemeManager.borderColor,
+                  color: ThemeManager.backgroundColor,
                 ),
                 border: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(5)),

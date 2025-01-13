@@ -43,7 +43,7 @@ class TaskTile extends StatelessWidget {
                 onTap: onEdit,
                 child: CircleAvatar(
                   backgroundColor: ThemeManager.primaryColor,
-                  child: const Icon(Icons.edit, color: Colors.white),
+                  child: Icon(Icons.edit, color: ThemeManager.cardColor),
                 ),
               ),
 
@@ -52,7 +52,7 @@ class TaskTile extends StatelessWidget {
                 onTap: onDelete,
                 child: CircleAvatar(
                   backgroundColor: ThemeManager.primaryColor,
-                  child: const Icon(Icons.delete, color: Colors.white),
+                  child: Icon(Icons.delete, color: ThemeManager.cardColor),
                 ),
               ),
             ],
@@ -74,7 +74,7 @@ class TaskTile extends StatelessWidget {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: ThemeManager.cardColor,
+                color: ThemeManager.borderColor,
               ),
               child: Image.asset("assets/todo.png"),
             ),
