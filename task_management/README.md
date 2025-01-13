@@ -1,9 +1,9 @@
 
 
 
-# Task_management
+# Task Management App
 ## Overview
-The Advanced To-Do App is a responsive and feature-rich task management application built using Flutter. Designed with a clean UI and intuitive navigation, it helps users organize their tasks efficiently. The app leverages the GetX state management library for reactive programming and follows the MVC (Model-View-Controller) pattern for maintainability and scalability.
+The Task Management App is a responsive and feature-rich task management application built using Flutter. Designed with a clean UI and intuitive navigation, it helps users organize their tasks efficiently. The app leverages the GetX state management library for reactive programming and follows the MVC (Model-View-Controller) pattern for maintainability and scalability.
 ## Screenshots
 <div style="display: flex;;">
     <img src="https://github.com/user-attachments/assets/cb54bf90-c99d-4a30-b727-f88cc3d448ed" alt="splash" style="margin-right: 10px;" width="300" height="600">
@@ -15,6 +15,7 @@ The Advanced To-Do App is a responsive and feature-rich task management applicat
  <img src="https://github.com/user-attachments/assets/c731fa92-7246-412d-a90c-95ed28f297fb" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
  <br> <br><br><br>
  <img src="https://github.com/user-attachments/assets/b41ce435-81f6-4d57-a268-6fdf13278a8b" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
+ <img src="https://github.com/user-attachments/assets/f01b4ae2-0ce1-4aa0-a7a0-959294079bb5" alt="Bookmark 2" style="margin-right: 10px;" width="300" height="600">
 </div>
 
 ## Key Features
