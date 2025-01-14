@@ -3,6 +3,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:task_management/view/task_screen.dart';
 
 void main() async {
+  ///ENTRY POINT
   runApp(const MainApp());
 }
 
